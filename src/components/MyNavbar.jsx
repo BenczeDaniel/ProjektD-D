@@ -20,27 +20,42 @@ export const MyNavbar = () => {
           <Nav className="me-auto" navbar>
             <NavItem>
               <NavLink to="/" className="nav-link" aria-current="page" href="#">
-                <motion.span
+                <motion.div className="mx-4"
                  initial={{ opacity: 0.6 }}
                  whileHover={{
-                    scale: 1.2,
-                    transition: { duration: 1 },
-                  }}   whileTap={{ scale: 0.9 }}
-                  whileInView={{ opacity: 1 }}
-                >
+                    scale: 2,
+                    transition: { duration: 0.2 },
+                  }}  
+                 >
                   Kezdőlap
-                </motion.span>
+                </motion.div>
               </NavLink>
             </NavItem>
             <NavItem>
               <NavLink to="/about" className="nav-link" href="#">
-                Árak
+              <motion.div className="mx-4"
+                 initial={{ opacity: 0.6 }}
+                 whileHover={{
+                    scale: 2,
+                    transition: { duration: 0.2 },
+                  }}  
+                 >
+                 Árak
+                </motion.div>
               </NavLink>
             </NavItem>
 
             <NavItem>
               <NavLink to="/contact" className="nav-link" href="#">
-                Kapcsolat
+              <motion.div className="mx-4"
+                 initial={{ opacity: 0.6 }}
+                 whileHover={{
+                    scale: 2,
+                    transition: { duration: 0.2 },
+                  }}  
+                 >
+                  Kapcsolat
+                </motion.div>
               </NavLink>
             </NavItem>
           </Nav>
@@ -48,12 +63,28 @@ export const MyNavbar = () => {
           <Nav navbar>
             <NavItem>
               <NavLink to="login" className="nav-link " href="#">
-                Bejelentkezés
+              <motion.div className="mx-4"
+                 initial={{ opacity: 0.6 }}
+                 whileHover={{
+                    scale: 2,
+                    transition: { duration: 0.2 },
+                  }}  
+                 >
+                  Bejelentkezés
+                </motion.div>
               </NavLink>
             </NavItem>
             <NavItem>
               <NavLink to="register" className="nav-link" href="#">
-                Regisztráció
+              <motion.div className="mx-4"
+                 initial={{ opacity: 0.6 }}
+                 whileHover={{
+                    scale: 2,
+                    transition: { duration: 0.2 },
+                  }}  
+                 >
+                  Regisztráció
+                </motion.div>
               </NavLink>
             </NavItem>
           </Nav>
