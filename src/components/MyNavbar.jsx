@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import {motion} from 'framer-motion'
 import { NavLink } from "react-router-dom";
+import {MyModal} from "./MyModal";
 import {
   Collapse,
   Navbar,
@@ -8,9 +9,12 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
+
 } from "reactstrap";
 
 export const MyNavbar = () => {
+  const [modal, setModal] = useState(false);
+  
   return (
     <div>
       <Navbar expand="sm" dark color="" fixed="top">
@@ -82,7 +86,7 @@ export const MyNavbar = () => {
                     scale: 2,
                     transition: { duration: 0.2 },
                   }}  
-                 >
+                 onClick={()=>setModal(true)} > 
                   Regisztráció
                 </motion.div>
               </NavLink>
@@ -90,6 +94,9 @@ export const MyNavbar = () => {
           </Nav>
         </Collapse>
       </Navbar>
+      
+      {modal && <MyModal modal={modal} setModal={setModal}/>}
+
     </div>
   );
 };
