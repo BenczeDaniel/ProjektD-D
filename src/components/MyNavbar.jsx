@@ -62,8 +62,8 @@ export const MyNavbar = () => {
 
           <Nav navbar>
             <NavItem>
-              <NavLink to="login" className="nav-link " href="#">
-              <motion.div className="mx-4"
+              <NavLink to="/login" className="nav-link " href="#">
+              <motion.div className="mx-5"
                  initial={{ opacity: 0.6 }}
                  whileHover={{
                     scale: 2,
@@ -75,8 +75,8 @@ export const MyNavbar = () => {
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="register" className="nav-link" href="#">
-              <motion.div className="mx-4"
+              <NavLink to="/register" className="nav-link" href="#">
+              <motion.div className="mx-5"
                  initial={{ opacity: 0.6 }}
                  whileHover={{
                     scale: 2,

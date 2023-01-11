@@ -11,6 +11,7 @@ import {QueryClient,QueryClientProvider} from 'react-query';
 
 
 
+
 const queryClient = new QueryClient()
 
 
@@ -26,6 +27,8 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
+ 
+  
   
 
     </Routes>
