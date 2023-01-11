@@ -4,7 +4,7 @@ import Background from './background'
 export const  Register=()=> {
   return (
     <div>
-    <h1 className='szines'>Regisztráció</h1>
+    <h1 className='szines'>Reg</h1>
     <Background/>
     </div>
   )
