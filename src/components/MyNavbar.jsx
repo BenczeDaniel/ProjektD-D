@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import {motion} from 'framer-motion'
 import { NavLink } from "react-router-dom";
 import {MyModal} from "./MyModal";
+import {LoginModal} from "./LoginModal";
+
 import {
   Collapse,
   Navbar,
@@ -13,6 +15,7 @@ import {
 } from "reactstrap";
 
 export const MyNavbar = () => {
+  const [loginmodal, setLoginModal] = useState(false);
   const [modal, setModal] = useState(false);
   
   return (
@@ -68,12 +71,12 @@ export const MyNavbar = () => {
             <NavItem>
               <NavLink to="/login" className="nav-link " href="#">
               <motion.div className="mx-5"
-                 initial={{ opacity: 0.6 }}
+                  initial={{ opacity: 0.6 }}
                  whileHover={{
                     scale: 2,
                     transition: { duration: 0.2 },
                   }}  
-                 >
+                 onClick={()=>setLoginModal(true)} > 
                   Bejelentkezés
                 </motion.div>
               </NavLink>
@@ -96,7 +99,9 @@ export const MyNavbar = () => {
       </Navbar>
       
       {modal && <MyModal modal={modal} setModal={setModal}/>}
+      {loginmodal && <LoginModal loginmodal={loginmodal} setLoginModal={setLoginModal}/>}
+
 
     </div>
-  );
+  );  
 };
