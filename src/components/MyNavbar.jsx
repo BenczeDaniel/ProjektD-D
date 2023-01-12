@@ -24,7 +24,7 @@ export const MyNavbar = () => {
           <Nav className="me-auto" navbar>
             <NavItem>
               <NavLink to="/" className="nav-link" aria-current="page" href="#">
-                <motion.div className="mx-4"
+                <motion.div className="mx-5"
                  initial={{ opacity: 0.6 }}
                  whileHover={{
                     scale: 2,
@@ -37,7 +37,7 @@ export const MyNavbar = () => {
             </NavItem>
             <NavItem>
               <NavLink to="/about" className="nav-link" href="#">
-              <motion.div className="mx-4"
+              <motion.div className="mx-5"
                  initial={{ opacity: 0.6 }}
                  whileHover={{
                     scale: 2,
@@ -51,7 +51,7 @@ export const MyNavbar = () => {
 
             <NavItem>
               <NavLink to="/contact" className="nav-link" href="#">
-              <motion.div className="mx-4"
+              <motion.div className="mx-5"
                  initial={{ opacity: 0.6 }}
                  whileHover={{
                     scale: 2,
@@ -87,7 +87,7 @@ export const MyNavbar = () => {
                     transition: { duration: 0.2 },
                   }}  
                  onClick={()=>setModal(true)} > 
-                  Regisztráció
+                Regisztráció
                 </motion.div>
               </NavLink>
             </NavItem>
