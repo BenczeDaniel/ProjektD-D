@@ -5,8 +5,9 @@ export const  Contact=()=> {
 
   return (
     <div>
-    <h1 className='szines'>Kapcsolat</h1>
+    <h1 className='szines'>Elérhetőségünk</h1>
     <Background/>
+    
     </div>
   )
 }

@@ -71,11 +71,21 @@
   background-color: rgba(10, 7, 7, 0.1) !important;
   border: 2px  solid white !important;
   text-align: center !important;
-  margin: auto !important;
-  display: table !important;
+  width: 550px !important;
+  height: 500px !important;
 
   
 }
+.loginmodal-content{
+  background-color: rgba(10, 7, 7, 0.1) !important;
+  border: 2px  solid white !important;
+  text-align: center !important;
+  width: 550px !important;
+  height: 500px !important;
+
+  
+}
+
 .modal.show{
   display: flex !important;
   justify-content: center !important;
