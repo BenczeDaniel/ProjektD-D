@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&family=Rubik+Vinyl&display=swap');
+
+
+
+
 .App {
   text-align: center;
 }
@@ -53,6 +58,7 @@
 .szines{
   color: aliceblue;
   transform: translate(30px, 90px);
+ 
   
 }
 
@@ -71,8 +77,9 @@
   background-color: rgba(10, 7, 7, 0.1) !important;
   border: 2px  solid white !important;
   text-align: center !important;
-  margin: auto !important;
-  display: table !important;
+  width: 550px !important;
+  height: 500px !important;
+ 
 
   
 }
@@ -80,14 +87,28 @@
   display: flex !important;
   justify-content: center !important;
   align-items: center !important; 
-}
-
-.mx-5{
-  color:white
+  
   
 }
 
+.mx-5{
+  color:white;
+  font-family: 'Rubik Vinyl', cursive;
+  font-size: 20px;
+  margin: 15px;
+  
+}
 
+.regpanel {
+  width: 350px;
+  padding: 5px;
+  margin: 10px;
+}
+
+.regpanel2{
+  color: white;
+  font-size: 20px;
+}
 
 
 

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import {motion} from 'framer-motion'
 import { NavLink } from "react-router-dom";
-import {MyModal} from "./MyModal";
+import {MyModal} from "./RegisterModal";
 import {LoginModal} from "./LoginModal";
 
 import {
@@ -58,7 +58,7 @@ export const MyNavbar = () => {
                  initial={{ opacity: 0.6 }}
                  whileHover={{
                     scale: 2,
-                    transition: { duration: 0.2 },
+                    transition: { duration: 0.1 },
                   }}  
                  >
                   Kapcsolat
