@@ -35,9 +35,11 @@ export const MyNavbar = () => {
                   }}  
                  >
                   Kezdőlap
+                  
                 </motion.div>
               </NavLink>
             </NavItem>
+            
             <NavItem>
               <NavLink to="/about" className="nav-link" href="#">
               <motion.div className="mx-5"
