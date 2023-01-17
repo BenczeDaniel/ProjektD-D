@@ -16,7 +16,7 @@ export const MyModal=({modal,setModal}) => {
             <input className='regpanel' type="text" placeholder="Írd be a felhasználó neved" name="username" required/> <br />
             <label className='regpanel2' for="password"><b>Jelszó: <br /> </b></label><br />
             <p>* Olyan jelszót válassz amelyet még nem használtál más felületen, a visszaélések elkerülésének érdekében (az ilyen visszaélésekkel kapcsolatosan nem áll módunkban felelősséget vállalni)!</p>
-            <input className='regpanel' type="text" placeholder="Írd be a jelszavad" name="password" required/> <br />
+            <input className='regpanel' type="password" placeholder="Írd be a jelszavad" name="password" required/> <br />
             <label className='regpanel2' for="Email:"><b>E-mail:</b></label><br />
             <input className='regpanel' type="text" placeholder="Írd be az Email-címet" name="email" required/> <br />
 

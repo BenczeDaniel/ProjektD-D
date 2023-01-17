@@ -131,6 +131,25 @@
   padding: 20px;
 
 }
+.homeposition{
+  position: absolute;
+  top: 94px;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  border: 1px solid white;
+  margin: 2px;
+  padding: 20px;
+}
+
+.helysize {
+
+  font-size: 12px;
+}
+
+.bemutatkozas{
+  color: red;
+}
 
 
 

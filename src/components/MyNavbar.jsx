@@ -39,20 +39,6 @@ export const MyNavbar = () => {
                 </motion.div>
               </NavLink>
             </NavItem>
-            
-            <NavItem>
-              <NavLink to="/about" className="nav-link" href="#">
-              <motion.div className="mx-5"
-                 initial={{ opacity: 0.6 }}
-                 whileHover={{
-                    scale: 2,
-                    transition: { duration: 0.2 },
-                  }}  
-                 >
-                 Árak
-                </motion.div>
-              </NavLink>
-            </NavItem>
 
             <NavItem>
               <NavLink to="/contact" className="nav-link" href="#">
