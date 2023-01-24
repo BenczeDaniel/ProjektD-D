@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 export const MyModal=({modal,setModal}) => {
+  const navigate = useNavigate()
   
 
   const toggle = () => setModal(!modal);
