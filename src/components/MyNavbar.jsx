@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import {MyModal} from "./RegisterModal";
 import {LoginModal} from "./LoginModal";
 
+
 import {
   Collapse,
   Navbar,
@@ -14,19 +15,27 @@ import {
 
 } from "reactstrap";
 
+
+
+
+
 export const MyNavbar = () => {
   const [loginmodal, setLoginModal] = useState(false);
   const [modal, setModal] = useState(false);
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => setIsOpen(!isOpen);
   
   return (
     <div>
       <Navbar expand="sm" dark color="" fixed="top">
         <NavbarBrand href="/"></NavbarBrand>
-        <NavbarToggler />
-        <Collapse navbar>
+        <NavbarToggler  onClick={toggle} />
+        <Collapse isOpen={isOpen} navbar>
           <Nav className="me-auto" navbar>
             <NavItem>
-              <NavLink to="/" className="nav-link" aria-current="page" href="#">
+              <NavLink onClick={toggle} to="/" className="nav-link" aria-current="page" href="#">
                 <motion.div className="mx-5"
                  initial={{ opacity: 0.6 }}
                  whileHover={{
@@ -41,7 +50,7 @@ export const MyNavbar = () => {
             </NavItem>
 
             <NavItem>
-              <NavLink to="/contact" className="nav-link" href="#">
+              <NavLink  onClick={toggle} to="/contact" className="nav-link" href="#">
               <motion.div className="mx-5"
                  initial={{ opacity: 0.6 }}
                  whileHover={{
@@ -57,7 +66,7 @@ export const MyNavbar = () => {
 
           <Nav navbar>
             <NavItem>
-              <NavLink to="/login" className="nav-link " href="#">
+              <NavLink onClick={toggle}  to="/login" className="nav-link " href="#">
               <motion.div className="mx-5"
                   initial={{ opacity: 0.6 }}
                  whileHover={{
@@ -70,7 +79,7 @@ export const MyNavbar = () => {
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/register" className="nav-link" href="#">
+              <NavLink onClick={toggle} to="/register" className="nav-link" href="#">
               <motion.div className="mx-5"
                  initial={{ opacity: 0.6 }}
                  whileHover={{
