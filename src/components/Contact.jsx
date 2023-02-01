@@ -1,12 +1,21 @@
 import React from 'react'
 import bg from '../background/bg.mp4'
+import { useQuery } from 'react-query'
+import { getOpening } from './getData'
+import ListGroup from 'react-bootstrap/ListGroup';
+
+
+
 
 export const  Contact=()=> {
 
-
-
+  const {data,status}=useQuery('opening',getOpening)
 
   return ( <>
+
+
+
+
 
 
     <video
@@ -26,13 +35,13 @@ export const  Contact=()=> {
 
 
     <div>
-    <h1 className='szines'>Elérhetőségünk
-    </h1>
+    <h2 className='elerhetoseg'>Elérhetőségünk
+    </h2>
 
  
 
     </div>
-    <p className='position'> ❗️  Kedves Ügyfeleink, Érdeklődők ❗️  <br />
+    <p className='position2'> ❗️  Kedves Ügyfeleink, Érdeklődők ❗️  <br />
 Ügyfélszolgálatunk minden nap 10-16 óráig érhető el. <br />
 Amennyiben kérdésed vagy észrevételed van keress minket bizalommal elérhetőségeink valamelyikén:
 <br />
@@ -40,13 +49,21 @@ Amennyiben kérdésed vagy észrevételed van keress minket bizalommal elérhet�
 📩 E-mail: D&DGYM@gmail.com
 
 
-☎️ Telefon: 06 70/000-1111
-
-
+☎️ Telefon: +36-70-000-1111
+<br />
 🕘 A Terem nyitvatartása 🕘 : 
+<br />
+<ListGroup>
+     {status == 'success' && data.data.map(obj=>(
+       <ListGroup.Item className='list'>{obj.day}:      {obj.start}-{obj.end} </ListGroup.Item>
+     ))
+       }
 
+
+      </ListGroup>
 
 </p>
+
     </>
     
     

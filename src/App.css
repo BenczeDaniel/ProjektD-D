@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&family=Rubik+Vinyl&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Rubik+80s+Fade&family=Rubik+Vinyl&display=swap');
 
 
 
@@ -77,11 +77,12 @@
   
 }
 
-.mx-5{
+.menu{
   color:white;
   font-family: 'Rubik Vinyl', cursive;
   font-size: 18px;
-  margin: 25px;
+  margin: 35px;
+  padding: 5px;
   
 }
 
@@ -208,6 +209,86 @@ video {
   }
 }
 
+
+
+
+
+@media screen and (max-width:600px) {
+  .collapse.show.navbar-collapse { 
+    display: flex !important;
+   margin: 0% !important;
+
+   
+
+    
+    
+  }
+}
+
+
+@media screen and (max-width:860px) {
+  .menu { 
+    margin: 0% !important;
+    font-size: 10px;
+    display: flex !important;
+    left: 20%;
+
+   
+
+    
+    
+  }
+}
+
+.list {
+  width: 50% !important;
+  margin: 1px !important;
+  padding: 1px !important;
+  color: black !important;
+  font-family: 'Bungee Spice', cursive; 
+  
+
+}
+
+.elerhetoseg {
+
+    color: aliceblue;
+    transform: translate(5px, 30px);
+    position : relative;
+    font-size: 35px;
+   
+    
+  }
+
+
+  .position2{
+    position: absolute;
+    top: 150px;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    border: 1px solid white;
+    margin: 2px;
+    padding: 20px;
+  
+  }
+
+  .list-group {
+    justify-content: center !important;
+    align-items: center !important;
+    
+  }
+
+
+  @media screen and (max-width:540px) {
+    .position2{ 
+      border: none !important;
+      width: 70% !important;
+      font-size: 14px !important;
+      justify-content: center !important;
+      align-items: center !important;
+    }
+  }
 
 
 

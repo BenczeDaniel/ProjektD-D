@@ -36,7 +36,7 @@ export const MyNavbar = () => {
           <Nav className="me-auto" navbar>
             <NavItem>
               <NavLink onClick={toggle} to="/" className="nav-link" aria-current="page" href="#">
-                <motion.div className="mx-5"
+                <motion.div className="menu"
                  initial={{ opacity: 0.6 }}
                  whileHover={{
                     scale: 2,
@@ -51,7 +51,7 @@ export const MyNavbar = () => {
 
             <NavItem>
               <NavLink  onClick={toggle} to="/contact" className="nav-link" href="#">
-              <motion.div className="mx-5"
+              <motion.div className="menu"
                  initial={{ opacity: 0.6 }}
                  whileHover={{
                     scale: 2,
@@ -67,7 +67,7 @@ export const MyNavbar = () => {
           <Nav navbar>
             <NavItem>
               <NavLink onClick={toggle}  to="/login" className="nav-link " href="#">
-              <motion.div className="mx-5"
+              <motion.div className="menu"
                   initial={{ opacity: 0.6 }}
                  whileHover={{
                     scale: 2,
@@ -80,7 +80,7 @@ export const MyNavbar = () => {
             </NavItem>
             <NavItem>
               <NavLink onClick={toggle} to="/register" className="nav-link" href="#">
-              <motion.div className="mx-5"
+              <motion.div className="menu"
                  initial={{ opacity: 0.6 }}
                  whileHover={{
                     scale: 2,

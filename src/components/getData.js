@@ -51,3 +51,9 @@ export const changePassword= async (formdata)=>{
     const response = await axios.put(url+'/auth/changePassword',formdata)
     return await response
 }
+
+
+export const getOpening= async ()=>{
+    const response = await axios.get(url+'/gym/opening')
+    return await response
+}
