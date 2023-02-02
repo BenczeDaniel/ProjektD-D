@@ -12,7 +12,7 @@ import {
 
 
 
-export const MyModal=({modal,setModal}) => {
+export const MyModal=({modal,setModal,setLoginModal,loginmodal}) => {
   const navigate = useNavigate()
   const [isValidU,setIsValidU] = useState(null)
   const [username,setUsername] = useState('')
@@ -84,6 +84,14 @@ export const MyModal=({modal,setModal}) => {
     }
   })
 
+
+const handleLogin = () => {
+  toggle()
+  setLoginModal(!loginmodal);
+  navigate('/login')
+}
+
+
   return (
     <div className='mymodal bg-light'>
       <Modal className='regmodal' isOpen={modal} fade={false} toggle={toggle}>
@@ -118,17 +126,22 @@ export const MyModal=({modal,setModal}) => {
 
         </ModalBody>
 
-        <div className="text-center">
+        <div className="reggomb text-center ">
       <Input 
       id="done"
       type="button" 
       disabled={!isValidU || !isValidP || !isValidE} 
-      value="Register" 
-      className="btn btn-dark"
+      value="Regisztráció" 
+      className="reggomb2 btn btn-dark"
       onClick={()=>mutationCheckRegister.mutate({username:username,email:email,password:password})}
       />
       </div>
       <h4 className="msg text-center m-3 text-success">{msg}</h4>
+      {success && <div className="btn btn-success"
+      onClick={handleLogin}
+      >Jelentkezz be !</div>}    
+
+
       
 
       </Modal>

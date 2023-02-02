@@ -292,3 +292,25 @@ video {
 
 
 
+  .reggomb{
+    width: 20%;
+    margin-left: 75% !important;
+  }
+
+  .loggomb{
+    background-color: green !important;
+    width: 25% !important;
+    margin-left: 65% !important;
+    margin-bottom: 3% !important;
+  }
+
+  .reggomb2{
+    
+    color: red !important;
+    
+  }
+
+  .btn-close{
+    background-color: red !important;
+    
+  }

@@ -95,7 +95,12 @@ export const MyNavbar = () => {
         </Collapse>
       </Navbar>
       
-      {modal && <MyModal modal={modal} setModal={setModal}/>}
+                  
+
+
+
+
+      {modal && <MyModal modal={modal} setModal={setModal} setLoginModal={setLoginModal} loginmodal={loginmodal}/>}
       {loginmodal && <LoginModal loginmodal={loginmodal} setLoginModal={setLoginModal}/>}
 
 

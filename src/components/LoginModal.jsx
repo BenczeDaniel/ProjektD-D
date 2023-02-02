@@ -66,10 +66,10 @@ export const LoginModal=({loginmodal,setLoginModal}) => {
             <br />
         </ModalBody>
         <div>
-        <Button disabled={!isValidU || !password} color="dark"
+        <Button disabled={!isValidU || !password} color="dark" className='loggomb'
         id="login"
         onClick={()=>mutationLogin.mutate({username:username, password:password})}
-        >Login</Button>
+        >Bejelentkezés</Button>
       </div>
       </Modal>
     </div>
