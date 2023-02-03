@@ -32,6 +32,11 @@ export const MyNavbar = ({loggedInUser, setLoggedInUser}) => {
   const handleProfile = () => {
     console.log("teszt",loggedInUser.username)
     navigate("/profiles")
+
+
+
+
+   
   }
   return (
     <div>
@@ -100,7 +105,7 @@ export const MyNavbar = ({loggedInUser, setLoggedInUser}) => {
           </Nav>}
           {loggedInUser?.username&&<Nav navbar>
             <NavItem>
-              <NavLink onClick={toggle}  to="/login" className="nav-link " href="#">
+              <NavLink onClick={toggle}  to="/" className="nav-link " href="#">
               <motion.div className="menu"
                   initial={{ opacity: 0.6 }}
                  whileHover={{

@@ -103,6 +103,7 @@ const mutationChangePw = useMutation(changePassword, {
           </Col>
           <Col sm={4}>
             <Input
+            className="csere"
               type="button"
               disabled={!newPw || newPw.length<6}
               value="Jelszó csere"
@@ -117,7 +118,7 @@ const mutationChangePw = useMutation(changePassword, {
           {!isUploading ? (
             <Input
               type="button"
-              className="btn w-50 m-1 btn-primary"
+              className="btn w-50 m-1 btn-success"
               value="Kép modosítása"
               disabled={!selFile.name}
               onClick={handleUpdateAvatar}

@@ -375,3 +375,8 @@ flex-direction: column  !important;
     font-size: 15px !important;
     text-align: center;
   }
+
+  .csere{
+    color:black !important;
+    background-color: white !important;
+  }
