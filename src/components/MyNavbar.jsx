@@ -27,7 +27,7 @@ export const MyNavbar = ({loggedInUser, setLoggedInUser}) => {
 
   const toggle = () => setIsOpen(!isOpen);
 
- 
+  console.log("MyNavbar",loggedInUser)
   
   return (
     <div>
@@ -51,7 +51,7 @@ export const MyNavbar = ({loggedInUser, setLoggedInUser}) => {
               </NavLink>
             </NavItem>
 
-            <NavItem>
+            {!loggedInUser?.username&&<NavItem>
               <NavLink  onClick={toggle} to="/contact" className="nav-link" href="#">
               <motion.div className="menu"
                  initial={{ opacity: 0.6 }}
@@ -63,10 +63,10 @@ export const MyNavbar = ({loggedInUser, setLoggedInUser}) => {
                   Kapcsolat
                 </motion.div>
               </NavLink>
-            </NavItem>
+            </NavItem>}
           </Nav>
 
-          <Nav navbar>
+          {!loggedInUser?.username&&<Nav navbar>
             <NavItem>
               <NavLink onClick={toggle}  to="/login" className="nav-link " href="#">
               <motion.div className="menu"
@@ -93,7 +93,29 @@ export const MyNavbar = ({loggedInUser, setLoggedInUser}) => {
                 </motion.div>
               </NavLink>
             </NavItem>
-          </Nav>
+          </Nav>}
+          {loggedInUser?.username&&<Nav navbar>
+            <NavItem>
+              <NavLink onClick={toggle}  to="/login" className="nav-link " href="#">
+              <motion.div className="menu"
+                  initial={{ opacity: 0.6 }}
+                 whileHover={{
+                    scale: 2,
+                    transition: { duration: 0.2 },
+                  }}  
+                  onClick={()=>setLoggedInUser({})} > 
+                  Kijelentkezés
+                </motion.div>
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink>
+                  <img style={{width:"80px",marginRight:"10px"}} src={loggedInUser.avatar==""?"img/user.png":loggedInUser.avatar} alt="Avatar" />
+                  
+                  
+              </NavLink>
+            </NavItem>
+          </Nav>}
         </Collapse>
       </Navbar>
       
