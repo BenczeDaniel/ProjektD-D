@@ -10,7 +10,9 @@ import {MyNavbar} from './components/MyNavbar';
 import {Register} from './components/Register';
 import {Login} from './components/Login';
 import {QueryClient,QueryClientProvider} from 'react-query';
-
+import {UserProfile} from './components/UserProfile'; 
+import {DDGYM} from './components/DDGYM';
+import { useState } from 'react';    
 
 
 
@@ -18,19 +20,25 @@ const queryClient = new QueryClient()
 
 
 function App() {
+  const [loggedInUser, setLoggedInUser] =useState({})
+  console.log('LoggedInUser:',loggedInUser)   
 
 
 
   return (
       <QueryClientProvider client={queryClient}>
-      <MyNavbar />
+        <MyNavbar loggedInUser={loggedInUser} setLoggedInUser={setLoggedInUser}  />  
       <div className="holder d-flex justify-content-center">
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/register" element={<Register />} />
-      <Route path="/login" element={<Login />} />
+      <Route path="/login" element={<Login setLoggedInUser={setLoggedInUser} />} />
+      {loggedInUser?.username && 
+      <Route path="/profile" element={<UserProfile  loggedInUser={loggedInUser} setLoggedInUser={setLoggedInUser}   />}/>}
+      {loggedInUser?.role=='admin' &&
+       <Route path="d&dgym" element={<DDGYM/>}/>}                                                                                
 
     </Routes>
     </div>

@@ -19,13 +19,15 @@ import {
 
 
 
-export const MyNavbar = () => {
+export const MyNavbar = ({loggedInUser, setLoggedInUser}) => {
   const [loginmodal, setLoginModal] = useState(false);
   const [modal, setModal] = useState(false);
 
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
+
+ 
   
   return (
     <div>
@@ -101,7 +103,7 @@ export const MyNavbar = () => {
 
 
       {modal && <MyModal modal={modal} setModal={setModal} setLoginModal={setLoginModal} loginmodal={loginmodal}/>}
-      {loginmodal && <LoginModal loginmodal={loginmodal} setLoginModal={setLoginModal}/>}
+      {loginmodal && <LoginModal loginmodal={loginmodal} setLoginModal={setLoginModal} setLoggedInUser={setLoggedInUser} />}
 
 
     </div>

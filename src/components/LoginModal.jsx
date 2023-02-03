@@ -1,10 +1,10 @@
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Navbar } from 'reactstrap';
 import React,{useState} from "react";
 import { checkUsername,login } from "./getData";
 import {useMutation} from 'react-query';
 import {useNavigate} from 'react-router-dom'
 
-export const LoginModal=({loginmodal,setLoginModal}) => {
+export const LoginModal=({loginmodal,setLoginModal,setLoggedInUser}) => {
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
   const [isValidU, setIsValidU] = useState(null)
@@ -32,20 +32,29 @@ export const LoginModal=({loginmodal,setLoginModal}) => {
 
   const mutationLogin=useMutation(login,{
     onSuccess:(data) =>{
-      console.log(data.data)
+      console.log("mutation",data.data)
       if(data.data?.error)
         setIsValidP(false)
       else{
         setIsValidP(true)
         const {username,email,id,avatar,avatar_id} = data.data
         setLoginModal({username:username,email:email,id:id,avatar:avatar,avatar_id:avatar_id})
-        navigate('/')
+        setLoggedInUser({username:username,email:email,id:id,avatar:avatar,avatar_id:avatar_id})
+        navigate('/profile')
+        toggle()
+        
       }
        
     }
   })
 
   return (
+
+
+
+
+
+
     <div>
       <Modal isOpen={loginmodal} fade={false} toggle={toggle}>
         <ModalHeader className='reg1' toggle={toggle}>Bejelentkezés</ModalHeader>
