@@ -13,6 +13,8 @@ import {QueryClient,QueryClientProvider} from 'react-query';
 import {UserProfile} from './components/UserProfile'; 
 import {DDGYM} from './components/DDGYM';
 import { useState } from 'react';    
+import { Prices } from './components/Prices';
+import { Training } from './components/Training';
 
 
 
@@ -33,6 +35,8 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/prices" element={<Prices />} />
+      <Route path="/training" element={<Training />} />
       <Route path="/register" element={<Register />} />
       <Route path="/login" element={<Login setLoggedInUser={setLoggedInUser} />} />
       {loggedInUser?.username && 
