@@ -54,6 +54,34 @@ export const MyNavbar = ({loggedInUser, setLoggedInUser}) => {
                 </motion.div>
               </NavLink>
             </NavItem>
+            
+            {loggedInUser?.username&&<NavItem>
+              <NavLink  onClick={toggle} to="/prices" className="nav-link" href="#">
+              <motion.div className="menu"
+                 initial={{ opacity: 0.6 }}
+                 whileHover={{
+                    scale: 2,
+                    transition: { duration: 0.1 },
+                  }}  
+                 >
+                  Árak
+                </motion.div>
+              </NavLink>
+            </NavItem>}
+
+            {loggedInUser?.username&&<NavItem>
+              <NavLink  onClick={toggle} to="/training" className="nav-link" href="#">
+              <motion.div className="menu"
+                 initial={{ opacity: 0.6 }}
+                 whileHover={{
+                    scale: 2,
+                    transition: { duration: 0.1 },
+                  }}  
+                 >
+                  Edző tervek
+                </motion.div>
+              </NavLink>
+            </NavItem>}
 
             {!loggedInUser?.username&&<NavItem>
               <NavLink  onClick={toggle} to="/contact" className="nav-link" href="#">

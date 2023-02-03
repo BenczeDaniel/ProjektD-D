@@ -122,7 +122,7 @@ const handleLogin = () => {
         onBlur={handleCheckEmail} 
         onKeyPress={(e)=>e.key=='Enter' ? document.getElementById("password").focus() : ''} 
         value={email} 
-        onChange={(e)=>setEmail(e.target.value)} /> <br />
+        onChange={(e)=>setEmail(e.target.value)} /> <br />  
 
         </ModalBody>
 
