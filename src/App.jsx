@@ -36,7 +36,7 @@ function App() {
       <Route path="/register" element={<Register />} />
       <Route path="/login" element={<Login setLoggedInUser={setLoggedInUser} />} />
       {loggedInUser?.username && 
-      <Route path="/profile" element={<UserProfile  loggedInUser={loggedInUser} setLoggedInUser={setLoggedInUser}   />}/>}
+      <Route path="/profiles" element={<UserProfile  loggedInUser={loggedInUser} setLoggedInUser={setLoggedInUser}   />}/>}
       {loggedInUser?.role=='admin' &&
        <Route path="d&dgym" element={<DDGYM/>}/>}                                                                                
 

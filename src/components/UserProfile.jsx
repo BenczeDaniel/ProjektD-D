@@ -87,13 +87,13 @@ const mutationChangePw = useMutation(changePassword, {
 
 
     <div className="profile mt-3">
-      <h3 className="p-2 border-bottom text-center">Saját fiók beállításai </h3>
+      <h3 className="textfiok p-2  text-center">Saját fiók beállításai </h3>
       <br />
-      <div className="row border p1">
+      <div className="email row    p1">
         <span className="col-2">Email:</span>
         <span className="col-10">{loggedInUser.email}</span>
       </div>
-      <Form className="border p-2 m-2 shadow">
+      <Form className="myform p-2 m-2 shadow">
         <FormGroup row>
           <Label for="pw" sm={12}>
             Új jelszó

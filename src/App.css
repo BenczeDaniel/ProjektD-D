@@ -318,3 +318,60 @@ video {
   .profile{
     color: white !important;
   }
+
+
+  @media screen and (max-width:500px) {
+    .profile{ 
+      border: none !important;
+      font-size: 12px !important;
+      flex-direction: column !important;
+      
+    }
+
+    .myform{
+      border: none !important;
+    }
+
+    .email{
+      border: none !important;;
+      text-align: center;
+      margin: 2px !important;
+    }
+
+.textfiok{
+  font-size: 12px !important;
+}
+
+.profile2{
+display: flex !important;
+flex-direction: column  !important;
+}
+
+  }
+
+
+
+  .myform{
+    border: 1px solid white;
+  }
+
+  .profile{
+    box-sizing: border-box !important;
+  }
+  .email{
+    border: 1px solid white;
+    text-align: center;
+  }
+
+  .lkjDVC{
+    min-width: 300px !important;
+  }
+
+  .avatar{
+    margin: 5px !important;
+  }
+  .profil3{
+    color: white !important;
+    font-size: 15px !important;
+    text-align: center;
+  }

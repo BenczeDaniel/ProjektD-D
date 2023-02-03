@@ -40,7 +40,7 @@ export const LoginModal=({loginmodal,setLoginModal,setLoggedInUser}) => {
         const {username,email,id,avatar,avatar_id} = data.data
         setLoginModal({username:username,email:email,id:id,avatar:avatar,avatar_id:avatar_id})
         setLoggedInUser({username:username,email:email,id:id,avatar:avatar,avatar_id:avatar_id})
-        navigate('/profile')
+        navigate('/')
         toggle()
         
       }
@@ -57,7 +57,7 @@ export const LoginModal=({loginmodal,setLoginModal,setLoggedInUser}) => {
 
     <div>
       <Modal isOpen={loginmodal} fade={false} toggle={toggle}>
-        <ModalHeader className='reg1' toggle={toggle}>Bejelentkezés</ModalHeader>
+        <ModalHeader className='reg1' toggle={toggle} >Bejelentkezés</ModalHeader>
         <ModalBody className='reg2'>A bejelentkezési adatokat , kérem helyesen adja meg ! <br /> <br /> <br />
 
             <label className='logpanel2' for="username"><b>Felhasználónév:</b></label><br />

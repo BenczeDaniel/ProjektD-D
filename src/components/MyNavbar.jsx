@@ -3,6 +3,7 @@ import {motion} from 'framer-motion'
 import { NavLink } from "react-router-dom";
 import {MyModal} from "./RegisterModal";
 import {LoginModal} from "./LoginModal";
+import {useNavigate} from 'react-router-dom'
 
 
 import {
@@ -22,13 +23,16 @@ import {
 export const MyNavbar = ({loggedInUser, setLoggedInUser}) => {
   const [loginmodal, setLoginModal] = useState(false);
   const [modal, setModal] = useState(false);
-
+  const navigate = useNavigate(); 
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
 
   console.log("MyNavbar",loggedInUser)
-  
+  const handleProfile = () => {
+    console.log("teszt",loggedInUser.username)
+    navigate("/profiles")
+  }
   return (
     <div>
       <Navbar expand="sm" dark color="" fixed="top">
@@ -108,12 +112,12 @@ export const MyNavbar = ({loggedInUser, setLoggedInUser}) => {
                 </motion.div>
               </NavLink>
             </NavItem>
-            <NavItem>
-              <NavLink>
-                  <img style={{width:"80px",marginRight:"10px"}} src={loggedInUser.avatar==""?"img/user.png":loggedInUser.avatar} alt="Avatar" />
+            <NavItem className="avatar">
+                  <p className="profil3">Saját Profil</p>
+                  <img style={{width:"80px",marginRight:"10px"}} src={loggedInUser.avatar==""?"img/user.png":loggedInUser.avatar} alt="Avatar" onClick={handleProfile} />
                   
                   
-              </NavLink>
+             
             </NavItem>
           </Nav>}
         </Collapse>
