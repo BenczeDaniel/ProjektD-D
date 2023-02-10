@@ -83,7 +83,7 @@ export const MyNavbar = ({loggedInUser, setLoggedInUser}) => {
                     transition: { duration: 0.1 },
                   }}  
                  >
-                  Edző tervek
+                  Edzés tervek
                 </motion.div>
               </NavLink>
             </NavItem>}
@@ -155,7 +155,7 @@ export const MyNavbar = ({loggedInUser, setLoggedInUser}) => {
           </Nav>}
         </Collapse>
       </Navbar>
-      
+
                   
 
 

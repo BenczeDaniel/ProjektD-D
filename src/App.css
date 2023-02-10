@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&family=Rubik+Vinyl&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Rubik+80s+Fade&family=Rubik+Vinyl&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Fruktur&display=swap');
 
 
 .App {
@@ -245,7 +245,7 @@ video {
   margin: 1px !important;
   padding: 1px !important;
   color: black !important;
-  font-family: 'Bungee Spice', cursive; 
+  font-family: 'Fruktur', cursive;
   
 
 }
@@ -253,7 +253,7 @@ video {
 .elerhetoseg {
 
     color: aliceblue;
-    transform: translate(5px, 30px);
+    transform: translate(-110px, 20px);
     position : relative;
     font-size: 35px;
    
@@ -380,3 +380,58 @@ flex-direction: column  !important;
     color:black !important;
     background-color: white !important;
   }
+
+  .sc-dkrFOg span{
+    color: white !important;
+  }
+
+
+  .description1{
+    width: 25%;
+    text-align: center;
+  }
+
+  .arak1{
+    width: 11%;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .megjegyzes1{
+    text-align: center;
+    width: 30%;
+    font-size: 12px;
+  }
+
+
+  .list1 {
+    color: white !important;
+    font-family: 'Fruktur', cursive;
+    display: flex;
+    border: 1px solid white;
+    flex-direction: column;
+    width: 800px;
+    
+  
+  }
+
+ .holder{
+  display: flex;
+  
+  
+ }
+
+ .holder div {
+  flex: 1;
+  margin: 5px;
+ }
+
+ .holderMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+
+ .xhold{
+  color: black !important;
+ }

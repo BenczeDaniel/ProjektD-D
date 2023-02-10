@@ -57,3 +57,11 @@ export const getOpening= async ()=>{
     const response = await axios.get(url+'/gym/opening')
     return await response
 }
+export const getPrices= async ()=>{
+    const response = await axios.get(url+'/gym/prices')
+    return await response
+}
+export const getCategory= async ()=>{
+    const response = await axios.get(url+'/gym/category')
+    return await response
+}

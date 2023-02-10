@@ -17,7 +17,7 @@ export const  Training=()=> {
 
     
     <div>
-        <h1>Edző tervek</h1>
+        <h1 className='text-center text-white'>Edzés tervek</h1>
     </div>
 
     </>
