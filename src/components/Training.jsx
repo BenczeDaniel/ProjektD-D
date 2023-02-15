@@ -1,5 +1,12 @@
 import React from 'react'   
 import bg from '../background/bg.mp4'
+import lab from '../edzeskepek/lab.jpg'
+import hat from '../edzeskepek/hat.jpg'
+import vall from '../edzeskepek/vall.jpg'
+import triceps from '../edzeskepek/triceps.jpg'
+import biceps from '../edzeskepek/biceps.jpg'
+import mell from '../edzeskepek/mell.jpg'
+
 import {Card,CardBody,CardTitle,Button,CardSubtitle,CardText} from 'reactstrap'
 
 
@@ -28,8 +35,8 @@ export const  Training=()=> {
   }}
 >
   <img
-    alt="Sample"
-    src="https://picsum.photos/300/200"
+   
+    src={biceps} className='imagetraining'
   />
   <CardBody>
     <CardTitle tag="h5">
@@ -55,8 +62,8 @@ export const  Training=()=> {
   }}
 >
   <img
-    alt="Sample"
-    src="https://picsum.photos/300/200"
+  
+    src={triceps} className='imagetraining'
   />
   <CardBody>
     <CardTitle tag="h5">
@@ -82,8 +89,8 @@ export const  Training=()=> {
   }}
 >
   <img
-    alt="Sample"
-    src="https://picsum.photos/300/200"
+   
+    src={vall} className='imagetraining'
   />
   <CardBody>
     <CardTitle tag="h5">
@@ -109,8 +116,8 @@ export const  Training=()=> {
   }}
 >
   <img
-    alt="Sample"
-    src="https://picsum.photos/300/200"
+   
+    src={hat} className='imagetraining'
   />
   <CardBody>
     <CardTitle tag="h5">
@@ -136,8 +143,8 @@ export const  Training=()=> {
   }}
 >
   <img
-    alt="Sample"
-    src="https://picsum.photos/300/200"
+
+    src={mell} className='imagetraining'
   />
   <CardBody>
     <CardTitle tag="h5">
@@ -155,6 +162,7 @@ export const  Training=()=> {
     <Button>
       Részletek
     </Button>
+    
   </CardBody>
 </Card>
 <Card className='kinezet row-col-md-4'
@@ -162,11 +170,11 @@ export const  Training=()=> {
     width: '18rem'
   }}
 >
-  <img
-    alt="Sample"
-    src="https://picsum.photos/300/200"
+  <img className='imagetraining'
+    src={lab} 
   />
   <CardBody>
+    
     <CardTitle tag="h5">
       Láb
     </CardTitle>
@@ -174,13 +182,13 @@ export const  Training=()=> {
       className="mb-2 text-muted"
       tag="h6"
     >
-      Card subtitle
+      Edzésről röviden:
     </CardSubtitle>
     <CardText>
-      Some quick example text to build on the card title and make up the bulk of the card‘s content.
+    Ez az edzésterv kifejezetten a láb izomcsoporta vonatkozik
     </CardText>
     <Button>
-      Button
+      Részletek
     </Button>
   </CardBody>
 </Card>
