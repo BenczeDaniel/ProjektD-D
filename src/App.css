@@ -317,11 +317,13 @@ video {
 
   .profile{
     color: white !important;
+    border: none !important;
+    flex: 0  !important;
   }
 
 
-  @media screen and (max-width:500px) {
-    .profile{ 
+  @media screen and (max-width:540px) {
+    .profile  { 
       border: none !important;
       font-size: 12px !important;
       flex-direction: column !important;
@@ -347,9 +349,27 @@ display: flex !important;
 flex-direction: column  !important;
 }
 
+.list1{
+  width: 90% !important;
+}
+
+.loggomb {
+  width: 100% !important;
+  margin-left: 2px !important;
+}
+
+.reggomb {
+  width: 100% !important;
+  margin-left: 2px !important;
+}
+
+
   }
 
-
+  @media screen and (max-width:700px) {
+    .list1{
+      width: 90% !important;
+    }}
 
   .myform{
     border: 1px solid white;
@@ -434,4 +454,8 @@ flex-direction: column  !important;
 
  .xhold{
   color: black !important;
+ }
+
+ .loggomb {
+
  }
