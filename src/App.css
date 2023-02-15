@@ -435,3 +435,10 @@ flex-direction: column  !important;
  .xhold{
   color: black !important;
  }
+
+.kinezet{
+  float: left !important;
+  margin: 5px !important;
+  text-align: center !important;
+  padding:5px !important;
+}
