@@ -33,8 +33,8 @@ export const Training = () => {
 
 
 
-      <div>
-        <h1 className='text-center text-white'>Edzés tervek</h1>
+      <div className='holder-cards'>
+        <h1 className='text-center text-white w-100 '>Edzés tervek</h1>
 
         <div className='container '>
           <div className='row justify-content-center'>
