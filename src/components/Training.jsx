@@ -29,7 +29,10 @@ export const  Training=()=> {
     <div>
         <h1 className='text-center text-white'>Edzés tervek</h1>
 
-        <Card className='kinezet row-col-md-6'
+<div className='container '>
+  <div className='row justify-content-center'>
+    <div className='col-md-4  text-center d-flex justify-content-center ass'>
+  <Card className=''
   style={{
     width: '18rem'
   }}
@@ -55,8 +58,11 @@ export const  Training=()=> {
       Részletek
     </Button>
   </CardBody>
-</Card>
-<Card className='kinezet row-col-md-4'
+</Card></div>
+
+
+<div className='col-md-4 text-center d-flex justify-content-center ass'>
+<Card className=''
   style={{
     width: '18rem'
   }}
@@ -82,8 +88,10 @@ export const  Training=()=> {
       Részletek
     </Button>
   </CardBody>
-</Card>
-<Card className='kinezet row-col-md-4'
+</Card></div>
+
+<div className='col-md-4 text-center d-flex justify-content-center ass'>
+<Card className=''
   style={{
     width: '18rem'
   }}
@@ -109,8 +117,12 @@ export const  Training=()=> {
       Részletek
     </Button>
   </CardBody>
-</Card>
-<Card className='kinezet row-col-md-4'
+</Card></div></div>
+
+
+<div className="row justify-content-center">
+<div className='col-md-3 text-center d-flex justify-content-center ass'>
+<Card className=''
   style={{
     width: '18rem'
   }}
@@ -136,8 +148,9 @@ export const  Training=()=> {
       Részletek
     </Button>
   </CardBody>
-</Card>
-<Card className='kinezet row-col-md-4'
+</Card></div>
+<div className='col-md-3 text-center d-flex justify-content-center ass'>
+<Card className=''
   style={{
     width: '18rem'
   }}
@@ -164,8 +177,10 @@ export const  Training=()=> {
     </Button>
     
   </CardBody>
-</Card>
-<Card className='kinezet row-col-md-4'
+</Card></div>
+
+<div className='col-md-3 text-center d-flex justify-content-center ass'>
+<Card className=''
   style={{
     width: '18rem'
   }}
@@ -192,6 +207,10 @@ export const  Training=()=> {
     </Button>
   </CardBody>
 </Card>
+
+</div>
+</div></div>
+
     </div>
 
     </>

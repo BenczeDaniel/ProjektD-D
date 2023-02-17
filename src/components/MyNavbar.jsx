@@ -40,7 +40,7 @@ export const MyNavbar = ({loggedInUser, setLoggedInUser}) => {
   }
   return (
     <div>
-      <Navbar expand="sm" dark color="" fixed="top">
+      <Navbar expand="sm" dark color="">
         <NavbarBrand href="/"></NavbarBrand>
         <NavbarToggler  onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>

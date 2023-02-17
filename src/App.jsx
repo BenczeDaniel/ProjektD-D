@@ -30,7 +30,7 @@ function App() {
   return (
       <QueryClientProvider client={queryClient}>
         <MyNavbar loggedInUser={loggedInUser} setLoggedInUser={setLoggedInUser}  />  
-      <div className="holder d-flex justify-content-center">
+      <div className="holder d-flex justify-content-center minuszholder">
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />

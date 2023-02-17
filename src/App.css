@@ -457,11 +457,24 @@ flex-direction: column  !important;
  }
 
 
- .kinezet{
-  width: 15%  !important;
-  float: left !important;
+
+
+ .imagetraining{
+  height: 200px;
+  margin-bottom: 15px;
+ 
  }
 
- .imgtraining{
- 
+
+ .cardcontainer{
+  display: flex !important;
+  align-items: center !important;
+ }
+
+ .ass{
+  flex: 0 !important;
+ }
+
+ .minuszholder{
+  margin-top: 0 !important;
  }
