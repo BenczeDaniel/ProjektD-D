@@ -62,6 +62,13 @@ export const getPrices= async ()=>{
     return await response
 }
 export const getCategory= async ()=>{
+    console.log(url+'/gym/category')
     const response = await axios.get(url+'/gym/category')
+    return await response
+}
+
+export const getTrainings= async ()=>{
+    console.log(url+'/gym/trainings')
+    const response = await axios.get(url+'/gym/trainings')
     return await response
 }
