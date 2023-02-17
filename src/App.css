@@ -250,15 +250,7 @@ video {
 
 }
 
-.elerhetoseg {
 
-    color: aliceblue;
-    transform: translate(-110px, 20px);
-    position : relative;
-    font-size: 35px;
-   
-    
-  }
 
 
   .position2{
@@ -446,6 +438,8 @@ flex-direction: column  !important;
   margin: 5px;
  }
 
+
+
  .holderMain {
   display: flex;
   flex-direction: column;
@@ -455,8 +449,6 @@ flex-direction: column  !important;
  .xhold{
   color: black !important;
  }
-
-
 
 
  .imagetraining{
@@ -477,4 +469,15 @@ flex-direction: column  !important;
 
  .minuszholder{
   margin-top: 0 !important;
+  
  }
+
+ .holder-cards {
+  display: flex ;
+  flex-wrap: wrap;
+  justify-content: center;
+ }
+
+
+ 
+

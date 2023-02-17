@@ -35,23 +35,21 @@ export const  Contact=()=> {
 
 
     <div>
-    <h2 className='elerhetoseg'>Elérhetőségünk
-    </h2>
 
  
 
     </div>
-    <p className='position2'> ❗️  Kedves Ügyfeleink, Érdeklődők ❗️  <br />
+    <p className='position2'> ❗️  Kedves Ügyfeleink, Érdeklődők ❗️  <br /> <br />
 Ügyfélszolgálatunk minden nap 10-16 óráig érhető el. <br />
 Amennyiben kérdésed vagy észrevételed van keress minket bizalommal elérhetőségeink valamelyikén:
-<br />
+<br /> <br />
 
-📩 E-mail: D&DGYM@gmail.com
+📩 E-mail: D&DGYM@gmail.com <br /> <br />
 
 
 ☎️ Telefon: +36-70-000-1111
-<br />
-🕘 A Terem nyitvatartása 🕘 : 
+<br /> <br />
+🕘 A Terem nyitvatartása 🕘 :
 <br />
 <ListGroup>
      {status == 'success' && data.data.map(obj=>(
