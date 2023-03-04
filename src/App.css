@@ -479,5 +479,13 @@ flex-direction: column  !important;
  }
 
 
- 
+.videoborder {
+  border: 3px solid white;
+}
+
+.videotext{
+  font-size: 3px;
+  
+}
+
 
