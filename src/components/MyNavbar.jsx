@@ -102,6 +102,22 @@ export const MyNavbar = ({ loggedInUser, setLoggedInUser }) => {
               </NavLink>
             </NavItem>}
           </Nav>
+          {loggedInUser?.role && loggedInUser.role == "admin" && <Nav navbar>
+              <NavItem>
+                <NavLink onClick={toggle} to="/admin" className="nav-link " href="#">
+                  <motion.div className="menu"
+                    initial={{ opacity: 0.6 }}
+                    whileHover={{
+                      scale: 2,
+                      transition: { duration: 0.2 },
+                    }}
+                  >
+                    Admin felület
+                  </motion.div>
+                </NavLink>
+              </NavItem>
+
+            </Nav>}
 
           {!loggedInUser?.username && <Nav navbar>
             <NavItem>
@@ -150,22 +166,6 @@ export const MyNavbar = ({ loggedInUser, setLoggedInUser }) => {
               <p className="profil3">Saját Profil</p>
               <img style={{ width: "80px", marginRight: "10px" }} src={loggedInUser.avatar == "" ? "img/user.png" : loggedInUser.avatar} alt="Avatar" onClick={handleProfile} />
             </NavItem>
-
-            </Nav>}
-            {loggedInUser?.role && loggedInUser.role == "admin" && <Nav navbar>
-              <NavItem>
-                <NavLink onClick={toggle} to="/admin" className="nav-link " href="#">
-                  <motion.div className="menu"
-                    initial={{ opacity: 0.6 }}
-                    whileHover={{
-                      scale: 2,
-                      transition: { duration: 0.2 },
-                    }}
-                  >
-                    Admin felület
-                  </motion.div>
-                </NavLink>
-              </NavItem>
 
             </Nav>}
             

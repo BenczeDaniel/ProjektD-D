@@ -1,56 +1,61 @@
 import React from 'react';
-import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
-import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
+import { getCategory, getPrices , getOpening } from "./getData";
 import bg from '../background/bg.mp4'
+import { useQuery } from "react-query";
+import ListGroup from 'react-bootstrap/ListGroup';
 
-export const Admin =()=> {
+
+export const Admin = () => {
+  const { data, status } = useQuery("category", getCategory,  'opening',getOpening); 
+
+
+  
+
   return (
-<>
+    <>
+      <video
+        autoPlay
+        loop
+        muted
+        style={{
+          zIndex: "-1",
+        }}
+      >
+        <source src={bg} type="video/mp4" />
+      </video>
+<div className="holderMain">
+      <div >
+        <h1 className="text-center text-white">Árak</h1>
+      </div>
+
+    
+
+      <div className="list1">
+        <div className="xhold holder bg-white ">
+          <div>Kategória</div>
+          <div>Diák</div>
+          <div>Felnőtt</div>
+        </div>
+        {status == "success" &&
+          data.data.map((obj) => (
+            <div className="holder" key={obj.id}>
+              <div>{obj.description} </div>
+              <div>{obj.kedvezmenyesar}-FT </div>
+              <div>{obj.Egeszar}-FT </div>
+            </div>
+          ))}
 
 
 
-<video
-autoPlay
-loop
-muted
-style={{
-  zIndex: "-1",
-}}
->
-<source src={bg} type="video/mp4" />
-</video>
+      </div>
+</div><ListGroup>
+     {status == 'success' && data.data.map(obj=>(
+       <ListGroup.Item className='list'>{obj.day}:      {obj.start}-{obj.end} </ListGroup.Item>
+     ))
+       }
 
 
- 
-
-
-    <Table>
-      <Thead>
-        <Tr>
-          <Th>Event</Th>
-          <Th>Date</Th>
-          <Th>Location</Th>
-        </Tr>
-      </Thead>
-      <Tbody>
-        <Tr>
-          <Td>Tablescon</Td>
-          <Td>9 April 2019</Td>
-          <Td>East Annex</Td>
-        </Tr>
-        <Tr>
-          <Td>Capstone Data</Td>
-          <Td>19 May 2019</Td>
-          <Td>205 Gorgas</Td>
-        </Tr>
-        <Tr>
-          <Td>Tuscaloosa D3</Td>
-          <Td>29 June 2019</Td>
-          <Td>Github</Td>
-        </Tr>
-      </Tbody>
-    </Table>
+      </ListGroup>
     </>
-    ); 
-
-}
+  );
+};
