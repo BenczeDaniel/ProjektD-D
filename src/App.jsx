@@ -11,10 +11,10 @@ import {Register} from './components/Register';
 import {Login} from './components/Login';
 import {QueryClient,QueryClientProvider} from 'react-query';
 import {UserProfile} from './components/UserProfile'; 
-import {DDGYM} from './components/DDGYM';
 import { useState } from 'react';    
 import { Prices } from './components/Prices';
 import { Training } from './components/Training';
+import { Admin } from './components/Admin';
 
 
 
@@ -41,8 +41,8 @@ function App() {
       <Route path="/login" element={<Login setLoggedInUser={setLoggedInUser} />} />
       {loggedInUser?.username && 
       <Route path="/profiles" element={<UserProfile  loggedInUser={loggedInUser} setLoggedInUser={setLoggedInUser}   />}/>}
-      {loggedInUser?.role=='admin' &&
-       <Route path="d&dgym" element={<DDGYM/>}/>}                                                                                
+      {loggedInUser?.role && loggedInUser.role == 'admin' &&
+       <Route path="/admin" element={<Admin/>}/>}                                                                                
 
     </Routes>
     </div>

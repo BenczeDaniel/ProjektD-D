@@ -37,9 +37,9 @@ export const LoginModal=({loginmodal,setLoginModal,setLoggedInUser}) => {
         setIsValidP(false)
       else{
         setIsValidP(true)
-        const {username,email,id,avatar,avatar_id} = data.data
-        setLoginModal({username:username,email:email,id:id,avatar:avatar,avatar_id:avatar_id})
-        setLoggedInUser({username:username,email:email,id:id,avatar:avatar,avatar_id:avatar_id})
+        const {username,email,id,avatar,avatar_id,role} = data.data
+        setLoginModal({username:username,email:email,id:id,avatar:avatar,avatar_id:avatar_id,role:role})
+        setLoggedInUser({username:username,email:email,id:id,avatar:avatar,avatar_id:avatar_id,role:role})
         navigate('/')
         toggle()
         

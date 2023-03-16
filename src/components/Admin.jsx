@@ -1,9 +1,29 @@
 import React from 'react';
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
+import bg from '../background/bg.mp4'
 
-export const DDGYM =()=> {
+export const Admin =()=> {
   return (
+<>
+
+
+
+<video
+autoPlay
+loop
+muted
+style={{
+  zIndex: "-1",
+}}
+>
+<source src={bg} type="video/mp4" />
+</video>
+
+
+ 
+
+
     <Table>
       <Thead>
         <Tr>
@@ -30,5 +50,7 @@ export const DDGYM =()=> {
         </Tr>
       </Tbody>
     </Table>
-  );
+    </>
+    ); 
+
 }
