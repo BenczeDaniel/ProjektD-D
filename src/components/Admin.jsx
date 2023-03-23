@@ -6,7 +6,8 @@ import ListGroup from 'react-bootstrap/ListGroup';
 
 
 export const Admin = () => {
-  const { data, status } = useQuery("category", getCategory,  'opening',getOpening); 
+  const { data, status } = useQuery("category", getCategory); 
+  const { data:dataOpening, status:statusOpening } = useQuery("opening", getOpening);
 
 
   
@@ -48,14 +49,16 @@ export const Admin = () => {
 
 
       </div>
-</div><ListGroup>
-     {status == 'success' && data.data.map(obj=>(
+      </div>
+<ListGroup>
+     {statusOpening == 'success' && dataOpening.data.map(obj=>(
        <ListGroup.Item className='list'>{obj.day}:      {obj.start}-{obj.end} </ListGroup.Item>
      ))
        }
 
 
-      </ListGroup>
+      </ListGroup> 
     </>
+   
   );
 };
