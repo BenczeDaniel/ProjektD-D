@@ -51,20 +51,20 @@ export const  Users=()=> {
     
           <div className="list8">
             <div className="xhold holder bg-white ">
-              <div>Felhasználónév</div>
-              <div>Email</div>
-              <div>Rang</div>
-              <div>Törlés</div>
-              <div>Modosítás</div>
+              <div align="center">Felhasználónév</div>
+              <div align="center">Email</div>
+              <div align="center">Rang</div>
+              <div align="center">Törlés</div>
+              <div align="center">Modosítás</div>
             </div>
             {status == "success" &&
               data.data.map((obj) => (
                 <div className="holder" key={obj.id}>
-                  <div>{obj.username} </div>
-                  <div> {obj.email}</div>
-                  <div> {obj.role}</div>
-                  <div onClick={()=>mutationDel.mutate(obj.id)}><i class="text-danger fa-regular fa-trash-can"></i></div>
-                  <div onClick={()=>handleUpdate(obj) } ><i class="text-warning fa-solid fa-pen-to-square"></i></div>
+                  <div align="center">{obj.username} </div>
+                  <div align="center"> {obj.email}</div>
+                  <div align="center"> {obj.role}</div>
+                  <div  align="center" onClick={()=>mutationDel.mutate(obj.id)}><i class="text-danger fa-regular fa-trash-can"></i></div>
+                  <div  align="center" onClick={()=>handleUpdate(obj) } ><i class="text-warning fa-solid fa-pen-to-square"></i></div>
                 </div>
               ))}
     

@@ -27,16 +27,20 @@ export const UpdatePrices = () => {
 
       <div className="list1">
         <div className="xhold holder bg-white ">
-          <div>Kategória</div>
-          <div>Diák</div>
-          <div>Felnőtt</div>
+          <div align="center">Kategória</div>
+          <div align="center">Diák</div>
+          <div align="center">Felnőtt</div>
+          <div align="center">Törlés</div>
+          <div align="center">Módosítás</div>
         </div>
         {status == "success" &&
           data.data.map((obj) => (
             <div className="holder" key={obj.id}>
-              <div>{obj.description} </div>
-              <div>{obj.kedvezmenyesar}-FT </div>
-              <div>{obj.Egeszar}-FT </div>
+              <div align="center">{obj.description} </div>
+              <div align="center">{obj.kedvezmenyesar}-FT </div>
+              <div align="center">{obj.Egeszar}-FT </div>
+              <div align="center"><i class="text-danger fa-regular fa-trash-can"></i></div>
+              <div align="center"><i class="text-warning fa-solid fa-pen-to-square"></i></div>
             </div>
           ))}
       </div>
