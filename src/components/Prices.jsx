@@ -2,7 +2,7 @@ import React from "react";
 import bg from "../background/bg.mp4";
 import { getCategory, getPrices } from "./getData";
 import { useQuery } from "react-query";
-import ListGroup from "react-bootstrap/ListGroup";
+
 export const Prices = () => {
   const { data, status } = useQuery("category", getCategory);
 

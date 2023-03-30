@@ -15,6 +15,9 @@ import { useState } from 'react';
 import { Prices } from './components/Prices';
 import { Training } from './components/Training';
 import { Admin } from './components/Admin';
+import { Users } from './components/Users';
+import { UpdatePrices } from './components/UpdatePrices';
+import { UpdateOpening } from './components/UpdateOpening';
 
 
 
@@ -38,11 +41,14 @@ function App() {
       <Route path="/prices" element={<Prices />} />
       <Route path="/training" element={<Training />} />
       <Route path="/register" element={<Register />} />
+      <Route path="/users" element={<Users />} />
       <Route path="/login" element={<Login setLoggedInUser={setLoggedInUser} />} />
       {loggedInUser?.username && 
       <Route path="/profiles" element={<UserProfile  loggedInUser={loggedInUser} setLoggedInUser={setLoggedInUser}   />}/>}
       {loggedInUser?.role && loggedInUser.role == 'admin' &&
-       <Route path="/admin" element={<Admin/>}/>}                                                                                
+       <Route path="/admin" element={<Admin/>}/>}
+        <Route path="/updatePrices" element={<UpdatePrices />} />   
+        <Route path="/updateOpening" element={<UpdateOpening />} />                                                                            
 
     </Routes>
     </div>

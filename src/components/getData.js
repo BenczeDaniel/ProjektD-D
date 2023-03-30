@@ -40,10 +40,10 @@ export const updateAvatar =    async (formdata) =>{
     return await response
 }
 
-export const deleteUser= async (formdata)=>{
-    console.log("getdata: ",formdata)
-    const response = await axios.delete(url+'/auth/deleteUser',{data:formdata})
-    return await response
+export const delUser= async (id)=>{
+    console.log("getdata: ",id)
+    const response = await axios.get(url+'/auth/deleteUser/'+id)
+    return response
 }
 
 export const changePassword= async (formdata)=>{
@@ -71,4 +71,17 @@ export const getTrainings= async ()=>{
     console.log(url+'/gym/trainings')
     const response = await axios.get(url+'/gym/trainings')
     return await response
+}
+
+
+export const getUsers= async ()=>{
+    console.log(url+'/gym/users')
+    const response = await axios.get(url+'/gym/users')
+    return await response
+}
+
+
+export const updateUser =    async (formdata) =>{
+    const response = await axios.post(url+'/auth/update',formdata);
+    return response
 }

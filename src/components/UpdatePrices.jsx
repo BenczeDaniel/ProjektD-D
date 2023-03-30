@@ -1,17 +1,10 @@
-import React from 'react';
-import { getCategory, getPrices , getOpening , getUsers} from "./getData";
-import bg from '../background/bg.mp4'
+import React from "react";
+import bg from "../background/bg.mp4";
+import { getCategory, getPrices } from "./getData";
 import { useQuery } from "react-query";
-import ListGroup from 'react-bootstrap/ListGroup';
 
-
-export const Admin = () => {
-  const { data, status } = useQuery("category", getCategory); 
-  const { data:dataOpening, status:statusOpening } = useQuery("opening", getOpening);
-  
-
-
-  
+export const UpdatePrices = () => {
+  const { data, status } = useQuery("category", getCategory);
 
   return (
     <>
@@ -46,22 +39,8 @@ export const Admin = () => {
               <div>{obj.Egeszar}-FT </div>
             </div>
           ))}
-
-
-
       </div>
-      </div>
-<ListGroup>
-     {statusOpening == 'success' && dataOpening.data.map(obj=>(
-       <ListGroup.Item className='list'>{obj.day}:      {obj.start}-{obj.end} </ListGroup.Item>
-     ))
-       }
-
-
-      </ListGroup> 
-
-
+</div>
     </>
-   
   );
 };

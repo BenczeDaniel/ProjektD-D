@@ -1,7 +1,7 @@
 import React from 'react';
 import { useMutation } from 'react-query';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-import { deleteUser } from './getData';
+import { delUser } from './getData';
 import { useNavigate } from 'react-router-dom';
 
 export const MyModal=({modal,setModal,username,avatar_id,setLoggedInUser})=> {
@@ -21,7 +21,7 @@ export const MyModal=({modal,setModal,username,avatar_id,setLoggedInUser})=> {
 
   const navigate=useNavigate()
 
-  const mutationDelete=useMutation(deleteUser,{
+  const mutationDelete=useMutation(delUser,{
     onError:(err)=>{
         console.log(err)
     },
