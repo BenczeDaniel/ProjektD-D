@@ -46,6 +46,13 @@ export const delUser= async (id)=>{
     return response
 }
 
+export const deleteAr= async (id)=>{
+    console.log("getdata:Ar ",id)
+    const response = await axios.get(url+'/gym/deletePrices/'+id)
+    return response
+}
+
+
 export const changePassword= async (formdata)=>{
     console.log("getdata: ",formdata)
     const response = await axios.put(url+'/auth/changePassword',formdata)
@@ -83,5 +90,10 @@ export const getUsers= async ()=>{
 
 export const updateUser =    async (formdata) =>{
     const response = await axios.post(url+'/auth/update',formdata);
+    return response
+}
+
+export const updateAr =    async (formdata) =>{
+    const response = await axios.post(url+'/auth/updatePrices',formdata);
     return response
 }
