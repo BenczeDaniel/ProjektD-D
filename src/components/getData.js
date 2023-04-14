@@ -94,6 +94,7 @@ export const updateUser =    async (formdata) =>{
 }
 
 export const updateAr =    async (formdata) =>{
-    const response = await axios.post(url+'/auth/updatePrices',formdata);
+    console.log(formdata)
+    const response = await axios.post(url+'/auth/updateprices',formdata);
     return response
 }

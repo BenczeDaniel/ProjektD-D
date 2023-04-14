@@ -547,3 +547,27 @@ a{
   color: black;
 }
 
+
+@media screen and (max-width:540px) {
+  .list8  { 
+
+      border: none !important;
+      width: 70% !important;
+      font-size: 14px !important;
+      justify-content: center !important;
+      align-items: center !important;
+    }
+  }
+
+
+  
+@media screen and (max-width:540px) {
+  .videoborder{ 
+
+      border: none !important;
+      width: 100% !important;
+      font-size: 14px !important;
+      
+    }
+  }
+

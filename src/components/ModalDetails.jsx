@@ -15,7 +15,7 @@ export const ModalDetails=({modal,setModal,description})  =>{
 
     
   
-    <div >
+    <div  className='modalvideo'>
       <Modal  isOpen={modal} toggle={toggle}>
         <ModalHeader className='text-white ' toggle={toggle}>Videó az edzésről!</ModalHeader>
         <ModalBody className='videotext '  > 

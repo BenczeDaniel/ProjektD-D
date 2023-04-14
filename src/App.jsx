@@ -17,7 +17,6 @@ import { Training } from './components/Training';
 import { Admin } from './components/Admin';
 import { Users } from './components/Users';
 import { UpdatePrices } from './components/UpdatePrices';
-import { UpdateOpening } from './components/UpdateOpening';
 
 
 
@@ -47,8 +46,7 @@ function App() {
       <Route path="/profiles" element={<UserProfile  loggedInUser={loggedInUser} setLoggedInUser={setLoggedInUser}   />}/>}
       {loggedInUser?.role && loggedInUser.role == 'admin' &&
        <Route path="/admin" element={<Admin/>}/>}
-        <Route path="/updatePrices" element={<UpdatePrices />} />   
-        <Route path="/updateOpening" element={<UpdateOpening />} />                                                                            
+        <Route path="/updatePrices" element={<UpdatePrices />} />                                                                            
 
     </Routes>
     </div>

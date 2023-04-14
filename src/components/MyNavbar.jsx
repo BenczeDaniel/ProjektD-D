@@ -133,14 +133,6 @@ export const MyNavbar = ({ loggedInUser, setLoggedInUser }) => {
                     </NavLink>
                   </NavItem>
                 </DropdownItem>
- 
-                <DropdownItem>
-                <NavItem>
-                    <NavLink to="/updateOpening">
-                    Nyitvatartás
-                    </NavLink>
-                  </NavItem>
-                </DropdownItem>
 
                 <DropdownItem>
                 <NavItem>

@@ -7,6 +7,9 @@ import { useQuery,useQueryClient,useMutation } from "react-query";
 
 
 export const UpdatePrices = () => {
+  
+  const [arItem,setArItem] =useState({});
+  const [modalAr,setModalAr] = useState(false);
   const { data, status } = useQuery("category", getCategory);
   const clientQuery = useQueryClient()
 
@@ -17,8 +20,7 @@ export const UpdatePrices = () => {
   })
   status=="success" && console.log(data.data)
 
-  const [arItem,setArItem] =useState({});
-    const [modalAr,setModalAr] = useState(false);
+  
 
 
 
@@ -28,6 +30,7 @@ export const UpdatePrices = () => {
       setModalAr(true)
     }
 
+    console.log("aritem:",arItem)
 
   return (
     <>
