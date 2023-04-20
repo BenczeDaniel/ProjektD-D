@@ -1,5 +1,5 @@
 import axios from 'axios';
-let url=""
+let url="https://danddgymserver.onrender.com"
 
 
 
