@@ -7,7 +7,6 @@ import { useQuery,useQueryClient,useMutation } from "react-query";
 
 
 export const UpdatePrices = () => {
-  
   const [arItem,setArItem] =useState({});
   const [modalAr,setModalAr] = useState(false);
   const { data, status } = useQuery("category", getCategory);
